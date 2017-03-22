@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MaterialModule } from '@angular/material';
+import { ResultsDetailComponent } from './results-detail.component';
+
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -12,7 +16,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot(),
+    ResultsDetailComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container fullscreen>
+   <md-sidenav #sidenav mode="side" >
+      <md-toolbar>
+        <md-toolbar class="md-theme-indigo">
+          <h1 class="md-toolbar-tools">Test Results</h1>
+        </md-toolbar>
+
+         <md-toolbar-row>
+            <button md-button ng-click="showCPUResults()" class="md-accent">
+              CPU Results
+            </button>
+         </md-toolbar-row>
+
+         <md-toolbar-row>
+            <button md-button ng-click="showMemoryResults()" class="md-accent">
+              Memory Results
+            </button>
+         </md-toolbar-row>
+
+         <md-toolbar-row>
+            <button md-button ng-click="showIOResults()" class="md-accent">
+              IO Results
+            </button>
+         </md-toolbar-row>
+
+      </md-toolbar>
+   </md-sidenav>
+
+
+   <md-toolbar color="primary">
+      <button md-button (click)="sidenav.toggle()">
+         <md-icon>menu</md-icon>
+      </button>
+      <span>Load Test Results</span>
+   </md-toolbar>
+
+   <results-detail></results-detail>
+
+
+</md-sidenav-container>
