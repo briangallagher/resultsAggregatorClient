@@ -1,0 +1,22 @@
+{
+  "cpuResults": {
+    "inputs": [{
+      "name": "Test Description",
+      "value": "Cpu Load"
+    }, {
+      "name": "Test Duration (seconds)",
+      "value": "300"
+    }],
+    "outputs": {
+      "graphs": [{
+
+      }]
+    }
+  },
+  "memoryResults": {
+
+  },
+  "ioResults": {
+
+  }
+}

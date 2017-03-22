@@ -1,26 +1,29 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { FormsModule }   from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { MaterialModule } from '@angular/material';
+import { AppComponent }  from './app.component';
+import { HeroDetailComponent } from './hero-detail.component';
 import { ResultsDetailComponent } from './results-detail.component';
+import { GoogleChartComponent } from './google-chart.component';
+import { ResultsService } from './results.service';
 
+import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     MaterialModule.forRoot(),
-    ResultsDetailComponent
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HeroDetailComponent,
+    ResultsDetailComponent,
+    GoogleChartComponent
+  ],
+  providers: [ ResultsService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

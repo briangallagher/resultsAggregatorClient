@@ -1,0 +1,57 @@
+<div *ngIf="resultsAvailable">
+
+    <h1>Inputs</h1>
+
+    <h1>Outputs</h1>
+
+    <ul>
+      <li *ngFor="let chart of currentResults.outputs.charts">
+        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
+      </li>
+    </ul>
+
+<!--   <div *ngIf="graphType === 'cpu'">
+
+    <h1>Inputs</h1>
+
+    <h1>Outputs</h1>
+
+    <ul class="charts">
+      <li *ngFor="let chart of results.cpuResults.outputs.charts">
+        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
+      </li>
+    </ul>
+  </div>
+
+
+  <div *ngIf="graphType === 'memory'">
+
+    <h1>Inputs</h1>
+
+    <h1>Outputs</h1>
+
+    <ul class="charts">
+      <li *ngFor="let chart of results.memoryResults.outputs.charts">
+        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
+      </li>
+    </ul>
+  </div>
+
+
+  <div *ngIf="graphType === 'io'">
+
+    <h1>Inputs</h1>
+
+    <h1>Outputs</h1>
+
+    <ul class="charts">
+      <li *ngFor="let chart of results.ioResults.outputs.charts">
+        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
+      </li>
+    </ul>
+  </div> -->
+
+</div>
+
+<!-- <div id="pie_chart" GoogleChart [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" > -->
+

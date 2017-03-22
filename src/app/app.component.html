@@ -6,19 +6,19 @@
         </md-toolbar>
 
          <md-toolbar-row>
-            <button md-button ng-click="showCPUResults()" class="md-accent">
+            <button md-button (click)="showCPUResults()" class="md-accent">
               CPU Results
             </button>
          </md-toolbar-row>
 
          <md-toolbar-row>
-            <button md-button ng-click="showMemoryResults()" class="md-accent">
+            <button md-button (click)="showMemoryResults()" class="md-accent">
               Memory Results
             </button>
          </md-toolbar-row>
 
          <md-toolbar-row>
-            <button md-button ng-click="showIOResults()" class="md-accent">
+            <button md-button (click)="showIOResults()" class="md-accent">
               IO Results
             </button>
          </md-toolbar-row>
@@ -34,7 +34,17 @@
       <span>Load Test Results</span>
    </md-toolbar>
 
-   <results-detail></results-detail>
-
+   <results-detail [graphType]="selectedGraph"></results-detail>
 
 </md-sidenav-container>
+
+
+<!--
+<div>
+  <a md-button color="primary">Flat button</a>
+  <a md-raised-button color="accent">Raised button</a>
+  <a md-fab color="primary"><md-icon>check</md-icon></a>
+  <a md-mini-fab color="primary"><md-icon>check</md-icon></a>
+</div>
+<my-hero-detail [hero]="selectedHero"></my-hero-detail>
+-->
