@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_results_1 = require('./mock-results');
-// import { HEROES } from './mock-heroes';
+var mock_results_service_1 = require('./mock-results.service');
 var ResultsService = (function () {
-    function ResultsService() {
+    function ResultsService(mockResultsService) {
+        this.mockResultsService = mockResultsService;
     }
     ResultsService.prototype.getResults = function () {
-        return Promise.resolve(mock_results_1.RESULTS);
+        return Promise.resolve(this.mockResultsService.getResults());
     };
     ResultsService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [mock_results_service_1.MockResultsService])
     ], ResultsService);
     return ResultsService;
 }());

@@ -1,57 +1,30 @@
 <div *ngIf="resultsAvailable">
 
-    <h1>Inputs</h1>
+  <h1 style="margin-left: 50px;">Inputs</h1>
 
-    <h1>Outputs</h1>
+  <table border="1" style="width:50%; margin-left: 100px;">
+    <tr style="1px solid black;">
+      <th>KEY</th>
+      <th>VALUE</th>
+    </tr>
+    <tr *ngFor="let input of inputs">
+      <td>{{input.key}}</td>
+      <td>{{input.value}}</td>
+    </tr>
+  </table>
 
-    <ul>
-      <li *ngFor="let chart of currentResults.outputs.charts">
-        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
-      </li>
-    </ul>
+  <br>
+  <br>
+  <br>
 
-<!--   <div *ngIf="graphType === 'cpu'">
+  <h1 style="margin-left: 50px;">Outputs</h1>
 
-    <h1>Inputs</h1>
-
-    <h1>Outputs</h1>
-
-    <ul class="charts">
-      <li *ngFor="let chart of results.cpuResults.outputs.charts">
-        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
-      </li>
-    </ul>
+  <div *ngFor="let chart of currentResults.outputs.charts" style="margin-left: 50px;">
+    <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
+    <br>
+    <br>
   </div>
-
-
-  <div *ngIf="graphType === 'memory'">
-
-    <h1>Inputs</h1>
-
-    <h1>Outputs</h1>
-
-    <ul class="charts">
-      <li *ngFor="let chart of results.memoryResults.outputs.charts">
-        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
-      </li>
-    </ul>
-  </div>
-
-
-  <div *ngIf="graphType === 'io'">
-
-    <h1>Inputs</h1>
-
-    <h1>Outputs</h1>
-
-    <ul class="charts">
-      <li *ngFor="let chart of results.ioResults.outputs.charts">
-        <div class="chart" id="{{chart.id}}" GoogleChart [chartData]="chart.chartData" [chartOptions]="chart.chartOptions" chartType="{{chart.chartType}}"></div>
-      </li>
-    </ul>
-  </div> -->
 
 </div>
 
-<!-- <div id="pie_chart" GoogleChart [chartData]="pie_ChartData" [chartOptions]="pie_ChartOptions" chartType="PieChart" > -->
 

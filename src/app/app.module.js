@@ -16,6 +16,7 @@ var hero_detail_component_1 = require('./hero-detail.component');
 var results_detail_component_1 = require('./results-detail.component');
 var google_chart_component_1 = require('./google-chart.component');
 var results_service_1 = require('./results.service');
+var mock_results_service_1 = require('./mock-results.service');
 var material_1 = require('@angular/material');
 require('hammerjs');
 var AppModule = (function () {
@@ -34,7 +35,7 @@ var AppModule = (function () {
                 results_detail_component_1.ResultsDetailComponent,
                 google_chart_component_1.GoogleChartComponent
             ],
-            providers: [results_service_1.ResultsService],
+            providers: [results_service_1.ResultsService, mock_results_service_1.MockResultsService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

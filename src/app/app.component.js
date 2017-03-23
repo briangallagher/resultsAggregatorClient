@@ -20,10 +20,11 @@ var hero_service_1 = require('./hero.service');
 //   </li>
 // </ul>
 var AppComponent = (function () {
+    // selectedGraph 'cpu';
     function AppComponent(heroService) {
         this.heroService = heroService;
         this.title = 'Tour of Heroes';
-        this.selectedGraph = new String('cpu');
+        this.selectedGraph = 'cpu';
     }
     AppComponent.prototype.getHeroes = function () {
         var _this = this;

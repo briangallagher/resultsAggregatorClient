@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
 
-  selectedGraph: String;
-  selectedGraph = new String('cpu');
+  selectedGraph: String = 'cpu';
+  // selectedGraph 'cpu';
 
   constructor(private heroService: HeroService) { }
 

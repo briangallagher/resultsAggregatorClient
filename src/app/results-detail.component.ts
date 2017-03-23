@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges} from '@angular/core';
 import { ResultsService } from './results.service';
 import { Results } from './results';
 
@@ -19,6 +19,15 @@ export class ResultsDetailComponent implements OnChanges, OnInit {
 
   constructor(private resultsService: ResultsService) {
   }
+
+
+  inputs = [{
+    key: '123',
+    value: 'asdfsaf'
+  },{
+    key: '123123',
+    value: 'asdfadfasdfsaf'
+  }]
 
 
   getResults(): void {

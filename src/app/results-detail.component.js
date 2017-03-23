@@ -15,6 +15,13 @@ var ResultsDetailComponent = (function () {
         this.resultsService = resultsService;
         this.resultsAvailable = false;
         this.currentResults = {};
+        this.inputs = [{
+                key: '123',
+                value: 'asdfsaf'
+            }, {
+                key: '123123',
+                value: 'asdfadfasdfsaf'
+            }];
     }
     ResultsDetailComponent.prototype.getResults = function () {
         var that = this;
