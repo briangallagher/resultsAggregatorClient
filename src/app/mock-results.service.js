@@ -13,7 +13,8 @@ var MockResultsService = (function () {
     function MockResultsService() {
     }
     MockResultsService.prototype.getResults = function () {
-        return { "cpuResults": {
+        return {
+            "cpuResults": {
                 "inputs": [{
                         "name": "Test Description",
                         "value": "Cpu Load"
@@ -95,10 +96,10 @@ var MockResultsService = (function () {
                         "value": "Memory Load"
                     }, {
                         "name": "Test Duration (seconds)",
-                        "value": "300"
+                        "value": "200"
                     }, {
                         "name": "Number of Test Runs",
-                        "value": "300"
+                        "value": "100"
                     }],
                 "outputs": {
                     "charts": [{
@@ -130,10 +131,10 @@ var MockResultsService = (function () {
                         "value": "Memory Load"
                     }, {
                         "name": "Test Duration (seconds)",
-                        "value": "300"
+                        "value": "500"
                     }, {
                         "name": "Number of Test Runs",
-                        "value": "300"
+                        "value": "30"
                     }],
                 "outputs": {
                     "charts": [{

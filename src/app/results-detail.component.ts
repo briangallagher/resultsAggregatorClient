@@ -20,20 +20,14 @@ export class ResultsDetailComponent implements OnChanges, OnInit {
   constructor(private resultsService: ResultsService) {
   }
 
-
-  inputs = [{
-    key: '123',
-    value: 'asdfsaf'
-  },{
-    key: '123123',
-    value: 'asdfadfasdfsaf'
-  }]
-
-
   getResults(): void {
 
     var that = this;
     this.resultsService.getResults().then(function (results) {
+
+      console.log('got results::: ');
+      console.log(JSON.stringify(results));
+
       that.results = results;
       that.switchResultsPage()
       that.resultsAvailable = true;
@@ -63,7 +57,6 @@ export class ResultsDetailComponent implements OnChanges, OnInit {
       this.currentResults = this.results.ioResults;
     }
   }
-
 
 }
 

@@ -9,6 +9,8 @@ import { GoogleChartComponent } from './google-chart.component';
 import { ResultsService } from './results.service';
 import { MockResultsService } from './mock-results.service';
 
+import { HttpModule }    from '@angular/http';
+
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
@@ -17,6 +19,7 @@ import 'hammerjs';
     BrowserModule,
     FormsModule,
     MaterialModule.forRoot(),
+    HttpModule
   ],
   declarations: [
     AppComponent,

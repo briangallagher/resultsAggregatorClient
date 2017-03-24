@@ -7,11 +7,13 @@
       <th>KEY</th>
       <th>VALUE</th>
     </tr>
-    <tr *ngFor="let input of inputs">
-      <td>{{input.key}}</td>
+    <tr *ngFor="let input of currentResults.inputs">
+      <td>{{input.name}}</td>
       <td>{{input.value}}</td>
     </tr>
   </table>
+
+
 
   <br>
   <br>

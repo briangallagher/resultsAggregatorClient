@@ -17,6 +17,7 @@ var results_detail_component_1 = require('./results-detail.component');
 var google_chart_component_1 = require('./google-chart.component');
 var results_service_1 = require('./results.service');
 var mock_results_service_1 = require('./mock-results.service');
+var http_1 = require('@angular/http');
 var material_1 = require('@angular/material');
 require('hammerjs');
 var AppModule = (function () {
@@ -28,6 +29,7 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 material_1.MaterialModule.forRoot(),
+                http_1.HttpModule
             ],
             declarations: [
                 app_component_1.AppComponent,

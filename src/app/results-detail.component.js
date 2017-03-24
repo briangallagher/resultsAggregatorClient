@@ -15,17 +15,12 @@ var ResultsDetailComponent = (function () {
         this.resultsService = resultsService;
         this.resultsAvailable = false;
         this.currentResults = {};
-        this.inputs = [{
-                key: '123',
-                value: 'asdfsaf'
-            }, {
-                key: '123123',
-                value: 'asdfadfasdfsaf'
-            }];
     }
     ResultsDetailComponent.prototype.getResults = function () {
         var that = this;
         this.resultsService.getResults().then(function (results) {
+            console.log('got results::: ');
+            console.log(JSON.stringify(results));
             that.results = results;
             that.switchResultsPage();
             that.resultsAvailable = true;
